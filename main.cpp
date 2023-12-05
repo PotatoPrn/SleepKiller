@@ -18,7 +18,7 @@ int main()
 		exit(1);
 	}
 
-	printf("Process ID: %x\n", Skiller.PID);
+	std::cout << "Process ID: " << " " << Skiller.PID << "\n";
 
 	Skiller.pHandle = OpenProcess(PROCESS_ALL_ACCESS, 0, Skiller.PID);
 
@@ -28,7 +28,7 @@ int main()
 		exit(1);
 	}
 
-	printf("Handle for Process is: %d\n", Skiller.pHandle);
+	std::cout << "Process Handle: " << " " << Skiller.pHandle << "\n";
 
 	if (Skiller.ResolveFunctionAddress())
 	{

@@ -1,4 +1,3 @@
-
 #include "Class.h"
 
 #include <TlHelp32.h>
@@ -21,10 +20,9 @@ bool SleepKiller::GetPID(const char* TargetProcess)
 			CloseHandle(hProcessSnap);
 			return true;
 		}
-	} while (Process32Next(hProcessSnap, &pe32));
+	}
+	while (Process32Next(hProcessSnap, &pe32));
 
 	CloseHandle(hProcessSnap);
 	return false;
-
 }
-
